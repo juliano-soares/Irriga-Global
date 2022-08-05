@@ -1,0 +1,32 @@
+{
+  "name": "irriga-global",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config ./src/server.js --ignore __tests__",
+    "start": "node -r dotenv/config ./src/server.js",
+    "run:weather": "node -r dotenv/config ./src/jobs/ScriptWeather.js",
+    "pretest": "set NODE_ENV=test && sequelize db:migrate && sequelize db:seed:all",
+    "test": "set NODE_ENV=test && jest --runInBand --detectOpenHandles",
+    "posttest": "set NODE_ENV=test && sequelize db:migrate:undo:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cron": "^2.1.0",
+    "dotenv": "^16.0.1",
+    "esm": "^3.2.25",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19",
+    "sqlite3": "^5.0.11",
+    "supertest": "^6.2.4"
+  }
+}
