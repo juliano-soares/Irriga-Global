@@ -2,7 +2,7 @@ const { cityInfos } = require("../controllers/WeatherController");
 
 const cronJob = require("cron").CronJob;
 
-const myJob = new cronJob('1 30 0,23 * * *', async () => {
+const myJob = new cronJob('1 30 * * * *', async () => {
   await cityInfos();
 });
 
