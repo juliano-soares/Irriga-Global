@@ -21,7 +21,7 @@ yarn
 - 5º - Configure o arquivo .env utiizando o modelo .env.example inserindo as informações do banco de dados criado 
 - 6º - Execute alguns dos comandos a seguir:
 
-Para executar a aplicação como desenvolvimento:
+Para executar a aplicação como desenvolvedor:
 ```
 yarn dev
 ```
@@ -97,7 +97,7 @@ CREATE TABLE weather (
     sunset time,
     rain DOUBLE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	FOREIGN KEY FK_City (city_id) REFERENCES cities(ID) ON UPDATE NO ACTION ON DELETE NO ACTION
+	FOREIGN KEY FK_City (city_id) REFERENCES cities(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 ```
 ---
