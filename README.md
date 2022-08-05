@@ -55,10 +55,6 @@ Ao rodar os comandos `yarn dev` ou `yarn start` também podemos fazer requisiç�
 
 ---
 ## DATABASE
-- Caso queira criar e executar as migrations e seeds via terminal com base na config do sequelize use o comando:
-```
-yarn sequelize db:create && yarn sequelize db:migrate && yarn sequelize db:seed:all
-```
 - Create Database:
 ```sql
 create database IRRIGA;
